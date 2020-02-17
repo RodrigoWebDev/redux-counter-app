@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Redux Counter</title>
+    <meta name="description" content="A basica counter created with Redux">
+    <meta name="author" content="Rodrigo Queiroz">
+    <link rel="shortcut icon" href="quantity.png" />
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
 
@@ -36,6 +39,17 @@
             transition: .2s;
         }
 
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo{
+            max-width: 100px;
+            display:block;
+            margin: 0 auto;
+        }
+
         .btn-container button {
             flex-basis: 48%;
 
@@ -60,6 +74,7 @@
 
 <body>
     <div class="app">
+        <img class="logo" src="quantity.png" alt="quantity icon">
         <h1>Simple Redux.js Counter</h1>
         <div class="number" data-js="counter">0</div>
 
@@ -69,7 +84,8 @@
         </div>
 
         <footer>
-            Developed by <a href="https://rqueiroz.netlify.com/" target="_blank">Rodrigo Queiroz</a>
+            Developed by <a href="https://rqueiroz.netlify.com/" target="_blank">Rodrigo Queiroz</a><br/><br/>
+            Icons made by <a href="https://www.flaticon.com/authors/wichaiwi" title="Wichai.wi">Wichai.wi</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
         </footer>
     </div>
 
