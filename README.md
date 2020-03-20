@@ -4,7 +4,7 @@
 My first web app using Redux architecture
 
 # Live Demo
-You can a  live demo [here](https://reduxjs-counter.netlify.com/)
+You can see a  live demo [here](https://reduxjs-counter.netlify.com/)
 
 ## Build With
 
