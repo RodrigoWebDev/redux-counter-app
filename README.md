@@ -3,7 +3,7 @@
 
 My first web app using Redux architecture
 
-# Live Demon
+# Live Demo
 You can a  live demo [here](https://reduxjs-counter.netlify.com/)
 
 ## Build With
