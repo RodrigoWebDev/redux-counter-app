@@ -1,9 +1,9 @@
 /*
   ## TODO
 
-  - Botão de remover todos do lado do botão de adcionar um
   - Integrar com o Google Fire Base
   - Estilizar
+  - PWA
 */
 
 (function () {

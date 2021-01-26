@@ -4,7 +4,7 @@ A Counter Web Application made with Redux architecture
 
 ## Live Demo
 
-You can see a live demo [here](https://reduxjs-counter.netlify.com/)
+You can see a live demo [here](https://redux-counter-app.surge.sh/)
 
 ## Build With
 
