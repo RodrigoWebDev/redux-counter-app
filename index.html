@@ -1,98 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redux Counter</title>
-    <meta name="description" content="A basica counter created with Redux">
-    <meta name="author" content="Rodrigo Queiroz">
-    <link rel="shortcut icon" href="quantity.png" />
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
-
-    <style>
-        .app {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            font-family: 'Lato', sans-serif;
-            padding: 0 16px;
-        }
-
-        a {
-            color: #2ecc71;
-            margin: 0 5px;
-        }
-
-        button {
-            background: #2ecc71;
-            color: white;
-            border: none;
-            font-size: 60px;
-            width: 50%;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: .8;
-            transition: .2s;
-        }
-
-        img{
-            max-width: 100%;
-            height: auto;
-        }
-
-        .logo{
-            max-width: 100px;
-            display:block;
-            margin: 0 auto;
-        }
-
-        .btn-container button {
-            flex-basis: 48%;
-
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-
-        .number {
-            font-size: 60px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="app">
-        <img class="logo" src="quantity.png" alt="quantity icon">
-        <h1>Simple Redux.js Counter</h1>
-        <div class="number" data-js="counter">0</div>
-
-        <div class="btn-container">
-            <button data-js="decrement">-</button>
-            <button data-js="increment">+</button>
-        </div>
-
-        <footer>
-            Developed by <a href="https://rqueiroz.netlify.com/" target="_blank">Rodrigo Queiroz</a><br/><br/>
-            Icons made by <a href="https://www.flaticon.com/authors/wichaiwi" title="Wichai.wi">Wichai.wi</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-        </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/redux.js"></script>
+    <title>Oline Counter Tool</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Online Counter</h1>
+      <hr />
+      <button id="add-counter" class="btn-primary">Add Counter</button>
+      <button id="remove-all-counters" class="btn-danger">
+        Remove All Counters
+      </button>
+      <div id="counter-list"></div>
     </div>
-
-
-    <script src="redux.js"></script>
-    <script src="main.js"></script>
-    <script src="tests.js"></script>
-</body>
-
+    <script src="./js/sweet-alert.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
