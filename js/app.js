@@ -1,6 +1,7 @@
 /*
   ## TODO
 
+  - Favicon
   - Integrar com o Google Fire Base
   - PWA
 */
