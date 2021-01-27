@@ -9,17 +9,23 @@
 (function () {
   const $ = document.querySelector.bind(document);
   const $$ = document.querySelectorAll.bind(document);
-  //State
-  const initalState = [
-    {
-      id: Math.floor((1 + Math.random()) * 100),
-      name: "Counter",
-      value: 0,
-      amount: 1,
-    },
-  ];
-  const store = Redux.createStore(counterReducer);
+  const localStorageData = localStorage.data;
+  let initalState = [];
 
+  if(localStorageData){
+    initalState = JSON.parse(localStorage.data)
+  }else{
+    initalState = [
+      {
+        id: Math.floor((1 + Math.random()) * 100),
+        name: "Counter",
+        value: 0,
+        amount: 1,
+      },
+    ];
+  }
+  
+  const store = Redux.createStore(counterReducer);
   render();
   store.subscribe(render);
 
@@ -33,6 +39,10 @@
       id: "",
       callback: () => store.dispatch(removeAllCounters()),
     });
+  });
+
+  window.addEventListener("beforeunload", function (e) {
+    saveDataToLocalStorage();
   });
 
   //reducers
@@ -358,5 +368,9 @@
     const state = store.getState();
     let index = state.findIndex((item) => item.id === id);
     return state[index].name;
+  }
+
+  function saveDataToLocalStorage(){
+    localStorage.setItem("data", JSON.stringify(store.getState()));
   }
 })();
