@@ -9,16 +9,30 @@
     <title>Oline Counter Tool</title>
   </head>
   <body>
-    <div id="app">
-      <h1>Online Counter</h1>
-      <hr />
-      <button id="add-counter" class="btn-primary">Add Counter</button>
-      <button id="remove-all-counters" class="btn-danger">
+    <header class="background-color-primary flex align-items-center justify-content-space-between padding-x-1 color-white">
+      <h1 class="font-size-3 flex">
+        <img class="width-4 height-4 margin-right-1" src="./img/hand-pointer-solid.svg"/>
+        Online Counter
+      </h1>
+      <a href="https://github.com/RodrigoWebDev/redux-counter-app" class="line-height-0"><img class="width-4 height-4" src="./img/github-brands.svg" /></a>
+    </header>
+    
+    <div id="app" class="p-1">
+      <button id="add-counter" class="btn-primary button-icon button-icon-text margin-bottom-0_5">
+        <img src="./img/plus-solid.svg" />
+        Add Counter
+      </button>
+      <button id="remove-all-counters" class="btn-danger button-icon button-icon-text margin-bottom-0_5">
+        <img src="./img/trash-solid.svg" />
         Remove All Counters
       </button>
-      <div id="counter-list"></div>
+      <div id="counter-list" class="md-flex flex-wrap m-x--0-5"></div>
     </div>
+
+    <footer>
+      Made by <a href="https://github.com/RodrigoWebDev">me</a> :)
+    </footer>
     <script src="./js/sweet-alert.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

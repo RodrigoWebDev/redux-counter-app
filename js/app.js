@@ -2,7 +2,6 @@
   ## TODO
 
   - Integrar com o Google Fire Base
-  - Estilizar
   - PWA
 */
 
@@ -197,22 +196,33 @@
     let template = "";
 
     store.getState().forEach((item) => {
-      template += `<div class="counter" data-id="${item.id}">
-      <h2>${item.name}</h2>
-      <p>Amount : ${item.amount}</p>
+      template += `
+      <div class="counter md-flex-basis-50 lg-flex-basis-33 xl-flex-basis-25 p-0-5">
+        <div class="p-1 shadow border-radius-1" data-id="${item.id}"> 
+          <h2>${item.name}</h2>
+          <p>Amount : ${item.amount}</p>
 
-      <div class="counter__value-container">
-        <button class="counter__decrement">-</button>
-          <strong class="counter__value">${item.value}</strong>
-        <button class="counter__increment">+</button>
-      </div>
-      <br/>
+          <div class="counter__value-container margin-bottom-1 flex align-items-center flex-wrap">
+            <button class="counter__decrement button-icon margin-bottom-0_5">
+              <img src="./img/minus-solid.svg" />
+            </button>
+            <strong class="counter__value font-size-4 margin-x-0_5">${item.value}</strong>
+            <button class="counter__increment button-icon margin-bottom-0_5">
+              <img src="./img/plus-solid.svg" />
+            </button>
+          </div>
 
-      <button class="counter__reset">Reset</button>
-      <button class="counter__edit btn btn-primary">Edit Counter</button>
-      <button class="btn-danger counter__remove btn-danger">Remove Counter</button>
-      <hr />
-    </div>`;
+          <button class="counter__reset button-icon margin-bottom-0_5">
+            <img src="./img/redo-alt-solid.svg" />
+          </button>
+          <button class="counter__edit btn btn-primary button-icon margin-bottom-0_5">
+            <img src="./img/edit-solid.svg" />
+          </button>
+          <button class="btn-danger counter__remove btn-danger button-icon margin-bottom-0_5">
+            <img src="./img/trash-solid.svg" />
+          </button>
+        </div>
+      </div>`;
     });
 
     $("#counter-list").innerHTML = template;
@@ -220,8 +230,10 @@
 
   function showNoCounterstemplate() {
     const noCounterstemplate = `
-    <h2>You don't have any counters</h2>
-    <p>Try to add one in the button above</p>
+    <div class="p-0-5">
+      <h2>You don't have any counters</h2>
+      <p>Try to add one in the button above</p>
+    </div>
     `;
 
     $("#counter-list").innerHTML = noCounterstemplate;
