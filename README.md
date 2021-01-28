@@ -13,3 +13,4 @@ You can see a live demo [here](https://redux-counter-app.surge.sh/)
 - Javascript
 - Redux architecture
 - Sweet Alert 2
+- LocalStorage

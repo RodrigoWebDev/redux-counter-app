@@ -124,6 +124,10 @@ h2{
   justify-content: space-between;
 }
 
+.justify-content-center{
+  justify-content: center;
+}
+
 .inline-flex{
   display: inline-flex;
 }
@@ -175,11 +179,13 @@ h2{
 .button-icon{
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .button-icon img{
   width: 24px;
   height: 24px;
+  margin-right: 0;
 }
 
 .button-icon-text img{
