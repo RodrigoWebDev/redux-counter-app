@@ -31,18 +31,22 @@
 
   $("#add-counter").addEventListener("click", function () {
     store.dispatch(addCounter());
+    saveDataToLocalStorage();
   });
 
   $("#remove-all-counters").addEventListener("click", function () {
     showModalConfirm({
       title: `Removing all counters...`,
       id: "",
-      callback: () => store.dispatch(removeAllCounters()),
+      callback: () => {
+        store.dispatch(removeAllCounters());
+        saveDataToLocalStorage();
+      }
     });
   });
 
   window.addEventListener("beforeunload", function (e) {
-    saveDataToLocalStorage();
+    //saveDataToLocalStorage();
   });
 
   //reducers
@@ -253,10 +257,12 @@
   function setListeners() {
     listener(".counter__increment", "click", function (dataId) {
       store.dispatch(incrementCounter(dataId));
+      saveDataToLocalStorage();
     });
 
     listener(".counter__decrement", "click", function (dataId) {
       store.dispatch(decrementCounter(dataId));
+      saveDataToLocalStorage();
     });
 
     $$(".counter__reset").forEach((item) => {
@@ -266,7 +272,10 @@
         showModalConfirm({
           title: `Reseting ${getCounterName(dataId)}...`,
           id: dataId,
-          callback: (_id) => store.dispatch(resetCounter(_id)),
+          callback: (_id) => {
+            store.dispatch(resetCounter(_id));
+            saveDataToLocalStorage();
+          },
         });
       });
     });
@@ -278,7 +287,10 @@
         showModalConfirm({
           title: `Removing ${getCounterName(dataId)}...`,
           id: dataId,
-          callback: (_id) => store.dispatch(removeCounter(_id)),
+          callback: (_id) => {
+            store.dispatch(removeCounter(_id)),
+            saveDataToLocalStorage();
+          }
         });
       });
     });
@@ -362,6 +374,8 @@
     if (name) {
       store.dispatch(updateCounterName(id, obj.name));
     }
+
+    saveDataToLocalStorage();
   }
 
   function getCounterName(id) {
